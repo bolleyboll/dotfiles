@@ -1,0 +1,4 @@
+auto-reload yes
+browser firefox
+macro , open-in-browser
+macro m set browser "mpv --geometry=100%:100% --window-scale=0.25 --ontop --no-border"; open-in-browser; set browser firefox
