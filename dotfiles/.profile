@@ -109,10 +109,11 @@ alias warpc="sudo warp-cli connect"
 alias warpd="sudo warp-cli disconnect "
 alias protonc="protonvpn-cli c"
 alias protond="protonvpn-cli d"
-alias fix-sound="pulseaudio -k && pulseaudio --start"
+alias fix-sound="sudo ulseaudio -k && sudo pulseaudio --start"
 alias update-theme="kquitapp5 plasmashell && kstart5 plasmashell"
 alias rem-hdd="sudo udisksctl unmount -b /dev/sdb2 && sudo udisksctl power-off -b /dev/sdb"
 alias pacclean="yay -Sc"
+alias git-tree="git log --graph --oneline --all"
 
 #------------------------------
 # ShellFuncs
@@ -144,6 +145,13 @@ zstyle ':completion:*:kill:*'   force-list always
 
 zstyle ':completion:*:*:killall:*' menu yes select
 zstyle ':completion:*:killall:*'   force-list always
+
+#------------------------------
+# ZSH Keybindings
+#------------------------------
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
 
 #------------------------------
 # Startup

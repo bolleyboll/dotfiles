@@ -7,4 +7,4 @@ color info red black bold
 color article cyan default
 browser firefox
 macro , open-in-browser
-macro m set browser "mpv --geometry=100%:100% --window-scale=0.25 --ontop --no-border --ytdl-format='bestvideo[height<=?1080]+bestaudio/best'"; open-in-browser; set browser firefox
+macro m set browser "mpv --geometry=100%:100% --speed=2 --volume=80 --window-scale=0.25 --ontop --no-border --ytdl-format='bestvideo[height<=?1080]+bestaudio/best'"; open-in-browser; set browser firefox
