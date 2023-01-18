@@ -99,7 +99,7 @@ export KWIN_TRIPLE_BUFFER=1
 # Alias stuff
 #------------------------------
 alias ls="ls --color -hF"
-alias ll="echo '--------------------------------------------------------------------------------' && echo 'Inode | Perms | NumLinks | Owner | Group | Size | Month | Day | Time | Filename' && echo '--------------------------------------------------------------------------------' && ls --color -lhia | tail --lines=+2"
+alias ll="echo '-------------------------------------------------------------------------------' && echo 'Inode | Perms | NumLinks | Owner | Group | Size | Month | Day | Time | Filename' && echo '-------------------------------------------------------------------------------' && ls --color -lhia | tail --lines=+2"
 alias give-plex-access="sudo chown -R plex:plex /run/media/bolleyboll/Aman_HDD"
 alias warpc="sudo warp-cli connect"
 alias warpd="sudo warp-cli disconnect "
