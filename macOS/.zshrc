@@ -1,33 +1,17 @@
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
-
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt autocd extendedglob nomatch notify
-unsetopt beep
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/Users/amangupta/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
 #------------------------------
-# ZSH Syntax Highlighting
+# Env Vars
 #------------------------------
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+export EDITOR="vim"
+export BROWSER="firefox"
+export PAGER="less"
 
-#------------------------------
-# NVM
-#------------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#-----------------------------
+# Dircolors
+#-----------------------------
+LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
+export LS_COLORS
 
 #------------------------------
 # Prompt
@@ -67,10 +51,45 @@ setprompt() {
 setprompt
 
 #------------------------------
+# ZSHRC
+#------------------------------
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd extendedglob nomatch notify
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/amangupta/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+#------------------------------
+# ZSH Syntax Highlighting
+#------------------------------
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#------------------------------
+# NVM
+#------------------------------
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#------------------------------
 # Alias stuff
 #------------------------------
-alias ls="ls --color -F"
-alias ll="ls --color -lhia"
+alias ls="ls --color -hF"
+alias ll="echo '--------------------------------------------------------------------------------' && echo 'Inode | Perms | NumLinks | Owner | Group | Size | Month | Day | Time | Filename' && echo '--------------------------------------------------------------------------------' && ls --color -lhia | tail --lines=+2"
+alias warpc="sudo warp-cli connect"
+alias warpd="sudo warp-cli disconnect "
+alias git-tree="git log --graph --oneline --all"
 
 #------------------------------
 # ShellFuncs
