@@ -23,11 +23,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #------------------------------
 source /usr/share/nvm/init-nvm.sh
 
-#------------------------------
-# Java
-#------------------------------
-source /etc/profile.d/jre.sh
-
 #-----------------------------
 # Dircolors
 #-----------------------------
@@ -74,7 +69,6 @@ setprompt
 #------------------------------
 # ZSHRC
 #------------------------------
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -114,7 +108,7 @@ alias git-tree="git log --graph --oneline --all"
 #------------------------------
 # ShellFuncs
 #------------------------------
-# -- coloured manuals
+# Coloured Manuals
 man() {
   env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
