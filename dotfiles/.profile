@@ -93,7 +93,7 @@ export KWIN_TRIPLE_BUFFER=1
 # Alias stuff
 #------------------------------
 alias ls="ls --color -hF"
-alias ll="echo '-------------------------------------------------------------------------------' && echo 'Inode | Perms | NumLinks | Owner | Group | Size | Month | Day | Time | Filename' && echo '-------------------------------------------------------------------------------' && ls --color -lhia | tail --lines=+2"
+alias ll="echo '-------------------------------------------------------------------------------' && echo 'Inode | Perms | NumLinks | Owner | Group | Size | Month | Day | Time | Filename' && echo '-------------------------------------------------------------------------------' && ls --color -lhia"
 alias give-plex-access="sudo chown -R plex:plex /run/media/bolleyboll/Aman_HDD"
 alias warpc="sudo warp-cli connect"
 alias warpd="sudo warp-cli disconnect "
@@ -104,6 +104,7 @@ alias update-theme="kquitapp5 plasmashell && kstart5 plasmashell"
 alias rem-hdd="sudo udisksctl unmount -b /dev/sdb2 && sudo udisksctl power-off -b /dev/sdb"
 alias pacclean="yay -Sc"
 alias git-tree="git log --graph --oneline --all"
+alias update-mirrorlist="sudo reflector --save /etc/pacman.d/mirrorlist --protocol 'http,https' --latest 30 --sort rate --country 'India,' && cat /etc/pacman.d/mirrorlist"
 
 #------------------------------
 # ShellFuncs
