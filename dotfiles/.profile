@@ -104,7 +104,7 @@ alias update-theme="kquitapp5 plasmashell && kstart5 plasmashell"
 alias rem-hdd="sudo udisksctl unmount -b /dev/sdb2 && sudo udisksctl power-off -b /dev/sdb"
 alias pacclean="yay -Sc"
 alias git-tree="git log --graph --oneline --all"
-alias update-mirrorlist="sudo reflector --save /etc/pacman.d/mirrorlist --protocol 'http,https' --latest 30 --sort rate --country 'India,' && cat /etc/pacman.d/mirrorlist"
+alias update-mirrorlist="sudo reflector --save /etc/pacman.d/mirrorlist --protocol 'http,https' --latest 300 --sort rate --country 'India,' && cat /etc/pacman.d/mirrorlist"
 
 #------------------------------
 # ShellFuncs
