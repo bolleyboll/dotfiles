@@ -86,10 +86,11 @@ export NVM_DIR="$HOME/.nvm"
 # Alias stuff
 #------------------------------
 alias ls="ls --color -hF"
-alias ll="echo '-------------------------------------------------------------------------------' && echo 'Inode | Perms | NumLinks | Owner | Group | Size | Month | Day | Time | Filename' && echo '-------------------------------------------------------------------------------' && ls --color -lhia | tail --lines=+2"
+alias ll="echo '-------------------------------------------------------------------------------' && echo 'Inode | Perms | NumLinks | Owner | Group | Size | Month | Day | Time | Filename' && echo '-------------------------------------------------------------------------------' && ls --color -lhia"
 alias warpc="sudo warp-cli connect"
 alias warpd="sudo warp-cli disconnect "
 alias git-tree="git log --graph --oneline --all"
+alias brew-mine="sudo chown -R $(whoami) /opt/homebrew"
 
 #------------------------------
 # ShellFuncs
