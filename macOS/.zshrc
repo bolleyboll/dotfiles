@@ -91,6 +91,7 @@ alias warpc="sudo warp-cli connect"
 alias warpd="sudo warp-cli disconnect "
 alias git-tree="git log --graph --oneline --all"
 alias brew-mine="sudo chown -R $(whoami) /opt/homebrew"
+alias find-ips="grep -Eo '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)' $1"
 
 #------------------------------
 # ShellFuncs
