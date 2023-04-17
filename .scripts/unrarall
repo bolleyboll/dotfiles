@@ -1,2 +1,0 @@
-for file in *.rar; do unrar e "$file"; done
-
