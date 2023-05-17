@@ -30,41 +30,11 @@ LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;3
 export LS_COLORS
 
 #------------------------------
-# Prompt
+# Prompt - Oh-My-Posh
 #------------------------------
-autoload -U colors zsh/terminfo
-colors
-
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[green]}%}%s%{${fg[cyan]}%}][%{${fg[blue]}%}%r/%S%%{${fg[cyan]}%}][%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
-
-setprompt() {
-  setopt prompt_subst
-
-  if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then 
-    p_host='%F{yellow}%M%f'
-  else
-    p_host='%F{green}%M%f'
-  fi
-
-  PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{cyan}[%f
-    %(!.%F{red}%n%f.%F{green}%n%f)
-    %F{cyan}@%f
-    ${p_host}
-    %F{cyan}][%f
-    %F{blue}%~%f
-    %F{cyan}]%f
-    %(!.%F{red}%#%f.%F{green}%#%f)
-    " "
-  '}}
-
-  PS2=$'%_>'
-  RPROMPT=$'${vcs_info_msg_0_}'
-}
-setprompt
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config ~/.scripts/prompt/hul-mine.omp.json)"
+fi
 
 #------------------------------
 # ZSHRC
@@ -106,8 +76,6 @@ alias pacclean="yay -Sc"
 alias git-tree="git log --graph --oneline --all"
 alias update-mirrorlist="sudo reflector --save /etc/pacman.d/mirrorlist --protocol 'http,https' --latest 300 --sort rate --country 'India,' && cat /etc/pacman.d/mirrorlist"
 alias fix-bluetooth="sudo systemctl restart bluetooth && pulseaudio -k && pulseaudio --start"
-alias stop-compositor="qdbus org.kde.KWin /Compositor suspend"
-alias start-compositor="qdbus org.kde.KWin /Compositor resume"
 
 #------------------------------
 # ShellFuncs
