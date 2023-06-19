@@ -63,6 +63,7 @@ alias git-tree="git log --graph --oneline --all"
 alias brew-mine="sudo chown -R $(whoami) /opt/homebrew"
 alias work-mine="sudo chown -R $USER /Users/amangupta/Public/Work"
 alias find-ips="grep -Eo '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)' $1"
+alias fix-docker="rm -rf ~/Library/Group\ Containers/group.com.docker\ && rm -rf ~/Library/Containers/com.docker.docker\ && rm -rf ~/.docker"
 
 #------------------------------
 # ShellFuncs
