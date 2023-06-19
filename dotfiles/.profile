@@ -76,6 +76,8 @@ alias pacclean="yay -Sc"
 alias git-tree="git log --graph --oneline --all"
 alias update-mirrorlist="sudo reflector --save /etc/pacman.d/mirrorlist --protocol 'http,https' --latest 300 --sort rate --country 'India,' && cat /etc/pacman.d/mirrorlist"
 alias fix-bluetooth="sudo systemctl restart bluetooth && pulseaudio -k && pulseaudio --start"
+alias compositor-on="qdbus org.kde.KWin /Compositor resume"
+alias compositor-off="qdbus org.kde.KWin /Compositor suspend"
 
 #------------------------------
 # ShellFuncs
