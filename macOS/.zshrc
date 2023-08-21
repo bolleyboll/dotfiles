@@ -40,10 +40,12 @@ compinit
 # End of lines added by compinstall
 
 #------------------------------
-# ZSH Syntax Highlighting
+# ZSH Syntax Highlighting & Autocomplete
 #------------------------------
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 #------------------------------
 # NVM
@@ -61,7 +63,7 @@ alias warpc="sudo warp-cli connect"
 alias warpd="sudo warp-cli disconnect "
 alias git-tree="git log --graph --oneline --all"
 alias brew-mine="sudo chown -R $(whoami) /opt/homebrew"
-alias work-mine="sudo chown -R $USER /Users/amangupta/Public/Work"
+alias work-mine="sudo chown -R $(whoami) /Users/amangupta/Public/Work"
 alias find-ips="grep -Eo '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)' $1"
 alias fix-docker="rm -rf ~/Library/Group\ Containers/group.com.docker\ && rm -rf ~/Library/Containers/com.docker.docker\ && rm -rf ~/.docker"
 
