@@ -91,6 +91,12 @@ bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 
 #------------------------------
+# GCloud
+#------------------------------
+source /opt/homebrew/share/google-cloud-sdk/path.zsh.inc
+source /opt/homebrew/share/google-cloud-sdk/completion.zsh.inc
+
+#------------------------------
 # Startup
 #------------------------------
 neofetch
