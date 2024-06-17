@@ -12,7 +12,7 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 ### Installation on Arch-based Systems
 
 ```bash
-sudo yay -S stow zsh zoxide fzf
+yay -S stow zsh zoxide fzf
 ```
 
 ### Installation on Debian-based Systems
