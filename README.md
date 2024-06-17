@@ -6,13 +6,13 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 
 - [GNU Stow](https://www.gnu.org/software/stow/)
 - [Zsh](https://www.zsh.org/)
-- [zoxide]()
-- [fzf]()
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [fzf](https://github.com/junegunn/fzf)
 
 ### Installation on Arch-based Systems
 
 ```bash
-sudo pacman -S stow zsh zoxide fzf
+sudo yay -S stow zsh zoxide fzf
 ```
 
 ### Installation on Debian-based Systems
@@ -25,6 +25,12 @@ sudo apt install stow zsh zoxide fzf
 
 ```bash
 brew install stow zsh zoxide fzf
+```
+
+### Change Default Shell to Zsh
+
+```bash
+chsh -s $(which zsh)
 ```
 
 ## Installation
