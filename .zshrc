@@ -16,8 +16,7 @@ fi
 #------------------------------
 # Env
 #------------------------------
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+export PATH=$PATH:$HOME/.scripts:/opt/homebrew/opt/openjdk@11/bin
 export EDITOR="vim"
 export BROWSER="firefox"
 export PAGER="less"
