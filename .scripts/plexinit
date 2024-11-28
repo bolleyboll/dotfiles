@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo mount --mkdir /dev/sdb2 "/run/media/bolleyboll/Aman_HDD"
 
 sudo chgrp plex "/run/media/bolleyboll"
@@ -7,9 +9,6 @@ sudo chmod g+rX "/run/media/bolleyboll/Aman_HDD"
 sudo chgrp plex "/run/media/bolleyboll/Aman_HDD/Entertainment"
 sudo chmod g+rX "/run/media/bolleyboll/Aman_HDD/Entertainment"
 
-sudo setfacl -m g:plex:rx "/run/media/bolleyboll/Aman_HDD/Entertainment"
-sudo setfacl -R -m g:plex:rx "/run/media/bolleyboll/Aman_HDD/Entertainment/Anime"
-sudo setfacl -R -m g:plex:rx "/run/media/bolleyboll/Aman_HDD/Entertainment/Movies"
-sudo setfacl -R -m g:plex:rx "/run/media/bolleyboll/Aman_HDD/Entertainment/TV Shows"
+sudo setfacl -R -m g:plex:rx "/run/media/bolleyboll/Aman_HDD/Entertainment"
 
 sudo systemctl start plexmediaserver.service

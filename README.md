@@ -38,5 +38,5 @@ chsh -s $(which zsh)
 ```bash
 git clone https://github.com/bolleyboll/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow .
+stow --adopt .
 ```
