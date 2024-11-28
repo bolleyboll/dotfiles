@@ -1,7 +1,11 @@
 #------------------------------
 # Startup
 #------------------------------
-fastfetch
+if command -v fastfetch &> /dev/null; then
+  fastfetch
+elif command -v neofetch &> /dev/null; then
+  neofetch
+fi
 
 #------------------------------
 # Powerlevel10k Instant Prompt - Needs to be at the Start
