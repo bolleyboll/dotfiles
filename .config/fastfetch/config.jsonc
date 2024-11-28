@@ -3,18 +3,12 @@
   "logo": {
     "source": "~/.config/fastfetch/logo",
     "type": "file",
-    "color": {
-      "1": "white",
-      "2": "red",
-      "3": "38;2;23;147;209"
-    },
     "padding": {
-      "top": 3,
+      "top": 2,
       "left": 2
     }
   },
   "modules": [
-    "break",
     {
       "type": "custom",
       "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
