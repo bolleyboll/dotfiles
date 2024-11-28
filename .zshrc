@@ -1,7 +1,7 @@
 #------------------------------
 # Startup
 #------------------------------
-neofetch
+fastfetch
 
 #------------------------------
 # Powerlevel10k Instant Prompt - Needs to be at the Start
@@ -67,8 +67,6 @@ zinit snippet OMZP::pip
 zinit snippet OMZP::python
 zinit snippet OMZP::pylint
 zinit snippet OMZP::rsync
-zinit snippet OMZP::ssh
-zinit snippet OMZP::ssh-agent
 zinit snippet OMZP::sudo
 zinit snippet OMZP::systemd
 zinit snippet OMZP::terraform
