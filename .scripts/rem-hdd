@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo udisksctl unmount -b /dev/disk/by-id/usb-Seagate_BUP_Portable_00000000NABATCW8-0:0-part2 && sudo udisksctl power-off -b /dev/disk/by-id/usb-Seagate_BUP_Portable_00000000NABATCW8-0:0

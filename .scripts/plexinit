@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo mount --mkdir /dev/sdb2 "/run/media/bolleyboll/Aman_HDD"
+sudo mount --mkdir /dev/disk/by-id/usb-Seagate_BUP_Portable_00000000NABATCW8-0:0-part2 "/run/media/bolleyboll/Aman_HDD"
 
 sudo chgrp plex "/run/media/bolleyboll"
 sudo chmod g+rX "/run/media/bolleyboll"
